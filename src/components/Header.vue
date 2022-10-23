@@ -1,30 +1,32 @@
 <template>
     <header>
-        <router-link :to="{ name: 'Home'}" class="logo">
-            <img :src="logoUrl" alt="VJProxy">
-        </router-link>
-
-        <nav>
-
-            <router-link :to="{ name: 'Price'}">
-                Цены
-
-                <nav>
-                    <router-link :to="{ name: 'PriceStandard'}">Стандартные прокси</router-link>
-                    <router-link :to="{ name: 'PriceProfessional'}">Профессиональные прокси</router-link>
-                    <router-link :to="{ name: 'PricePrivate'}">Приватные прокси</router-link>
-                    <router-link :to="{ name: 'PriceMobile'}">Мобильные прокси</router-link>
-                    <router-link :to="{ name: 'PriceVPN'}">VPN</router-link>
-                </nav>
+        <div class="container">
+            <router-link :to="{ name: 'Home'}" class="logo">
+                <img :src="logoUrl" alt="VJProxy">
             </router-link>
 
-            <router-link :to="{ name: 'About'}">О компании</router-link>
-            <router-link :to="{ name: 'Reviews'}">Отзывы</router-link>
-            <router-link :to="{ name: 'FAQ'}">FAQ</router-link>
-            <router-link :to="{ name: 'Contacts'}">Контакты</router-link>
-        </nav>
+            <nav>
 
-        <a href="https://lk.vjproxy.com/login" class="btn">Личный кабинет</a>
+                <router-link :to="{ name: 'Price'}">
+                    Цены
+
+                    <nav>
+                        <router-link :to="{ name: 'PriceStandard'}">Стандартные прокси</router-link>
+                        <router-link :to="{ name: 'PriceProfessional'}">Профессиональные прокси</router-link>
+                        <router-link :to="{ name: 'PricePrivate'}">Приватные прокси</router-link>
+                        <router-link :to="{ name: 'PriceMobile'}">Мобильные прокси</router-link>
+                        <router-link :to="{ name: 'PriceVPN'}">VPN</router-link>
+                    </nav>
+                </router-link>
+
+                <router-link :to="{ name: 'About'}">О компании</router-link>
+                <router-link :to="{ name: 'Reviews'}">Отзывы</router-link>
+                <router-link :to="{ name: 'FAQ'}">FAQ</router-link>
+                <router-link :to="{ name: 'Contacts'}">Контакты</router-link>
+            </nav>
+
+            <a href="https://lk.vjproxy.com/login" class="btn">Личный кабинет</a>
+        </div>
     </header>
 </template>
 
@@ -40,15 +42,32 @@
         position: sticky;
         top: 0;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-
         width: 100%;
         height: $height;
-        margin-top: -$height - $padding-top;
+        margin-top: -$height - $padding-top - $padding-top;
         padding-top: $padding-top;
+        padding-bottom: $padding-top;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+
+            backdrop-filter: blur(2px);
+            z-index: -2;
+        }
+
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: auto;
+        }
     }
 
     .logo {

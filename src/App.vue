@@ -28,7 +28,7 @@
     }
 
     main {
-        $header-height: 60px + 10px;
+        $header-height: 60px + 10px + 10px;
         padding-top: $header-height;
 
         background: linear-gradient(90deg, #041E87 .1%, #04A0CC 100%);
