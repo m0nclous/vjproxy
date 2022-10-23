@@ -37,6 +37,10 @@
             </div>
         </section>
     </section>
+
+    <section class="page-content">
+
+    </section>
 </template>
 
 <script lang="ts" setup>
@@ -89,6 +93,11 @@
 </script>
 
 <style lang="scss" scoped>
+    .page-content {
+        // TODO удалить
+        min-height: 700px;
+    }
+
     .promotion {
         display: grid;
         margin-top: 50px;
