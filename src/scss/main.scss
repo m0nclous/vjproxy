@@ -93,3 +93,15 @@ body {
 
   }
 }
+
+.top-info {
+  $header-height: 60px + 10px + 10px;
+  padding: $header-height 0;
+
+  background: linear-gradient(90deg, #041E87 .1%, #04A0CC 100%);
+
+  width: 100%;
+  max-width: unset !important;
+
+  color: white;
+}

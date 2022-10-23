@@ -1,17 +1,14 @@
 <template>
     <Header />
-
-    <main>
-        <div class="container">
-            <router-view />
-        </div>
-    </main>
+    <router-view />
+    <Footer />
 
     <div id="particles-js"></div>
 </template>
 
 <script lang="ts" setup>
     import Header from './components/Header.vue';
+    import Footer from './components/Footer.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -27,18 +24,5 @@
         background-size: cover;
 
         z-index: -1;
-    }
-
-    main {
-        $header-height: 60px + 10px + 10px;
-        padding-top: $header-height;
-
-        background: linear-gradient(90deg, #041E87 .1%, #04A0CC 100%);
-
-        height: 400px;
-        width: 100%;
-        max-width: unset !important;
-
-        color: white;
     }
 </style>

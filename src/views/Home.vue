@@ -1,39 +1,41 @@
 <template>
-    <section class="promotion">
-        <div>
-            <h1>
-                <span class="highlight">Приватный</span> прокси сервис и VPN
-            </h1>
+    <section class="top-info">
+        <section class="container promotion">
+            <div>
+                <h1>
+                    <span class="highlight">Приватный</span> прокси сервис и VPN
+                </h1>
 
-            <div class="online-proxy">
-                <span class="counter">192 557</span> Прокси сейчас работает
-            </div>
+                <div class="online-proxy">
+                    <span class="counter">192 557</span> Прокси сейчас работает
+                </div>
 
-            <div class="d-flex gap-2">
-                <a href="https://lk.vjproxy.com/login" class="btn btn--transparent">
-                    Купить прокси
-                </a>
+                <div class="d-flex gap-2">
+                    <a href="https://lk.vjproxy.com/login" class="btn btn--transparent">
+                        Купить прокси
+                    </a>
 
-                <div class="btn btn--transparent">
-                    Задать вопрос
+                    <div class="btn btn--transparent">
+                        Задать вопрос
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="carousel--wrapper">
-            <carousel :autoplay="3000" :transition="500" :wrap-around="true">
-                <slide v-for="(slide, index) in slides" :key="index">
-                    <h2 class="highlight">{{ slide.title }}</h2>
-                    <h2 v-if="slide.subTitle">{{ slide.subTitle }}</h2>
-                    <div>{{ slide.content }}</div>
-                    <router-link :to="{ name: slide.route }" class="btn">Подробнее</router-link>
-                </slide>
+            <div class="carousel--wrapper">
+                <carousel :autoplay="3000" :transition="500" :wrap-around="true">
+                    <slide v-for="(slide, index) in slides" :key="index">
+                        <h2 class="highlight">{{ slide.title }}</h2>
+                        <h2 v-if="slide.subTitle">{{ slide.subTitle }}</h2>
+                        <div>{{ slide.content }}</div>
+                        <router-link :to="{ name: slide.route }" class="btn">Подробнее</router-link>
+                    </slide>
 
-                <template #addons>
-                    <pagination />
-                </template>
-            </carousel>
-        </div>
+                    <template #addons>
+                        <pagination />
+                    </template>
+                </carousel>
+            </div>
+        </section>
     </section>
 </template>
 
