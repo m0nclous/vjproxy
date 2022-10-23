@@ -3,6 +3,8 @@ html {
   --color-black: #2E2E2E;
   --color-blue-100: #8DBCEC;
   --color-blue-200: #04CEC6;
+
+  font-size: .85rem;
 }
 
 body {
@@ -10,6 +12,8 @@ body {
 
   font-family: 'Montserrat', sans-serif;
   color: var(--color-black);
+
+  min-width: 1140px;
 }
 
 #app {
@@ -19,10 +23,20 @@ body {
 
 .container {
   max-width: 1110px;
+  margin: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-2 {
+  gap: 20px;
 }
 
 .btn {
   position: relative;
+  display: inline-block;
 
   padding: 15px 40px;
 
@@ -35,6 +49,8 @@ body {
 
   color: var(--color-white);
   overflow: hidden;
+
+  z-index: 1;
 
   &:before, &:after {
     content: '';
@@ -63,5 +79,17 @@ body {
     &:after {
       opacity: 1;
     }
+  }
+
+  &--transparent {
+    box-shadow: inset 0 0 0 2px var(--color-blue-200);
+
+    &:before {
+      background: transparent;
+    }
+  }
+
+  &--small {
+
   }
 }

@@ -48,6 +48,8 @@
         padding-top: $padding-top;
         padding-bottom: $padding-top;
 
+        z-index: 100;
+
         &:after {
             content: '';
             display: block;
@@ -66,7 +68,6 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
-            margin: auto;
         }
     }
 

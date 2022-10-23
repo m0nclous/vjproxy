@@ -2,7 +2,9 @@
     <Header />
 
     <main>
-        <router-view />
+        <div class="container">
+            <router-view />
+        </div>
     </main>
 
     <div id="particles-js"></div>
