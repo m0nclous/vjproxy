@@ -38,8 +38,9 @@
         </section>
     </section>
 
-    <section class="page-content container">
+    <section class="page-content">
         <Packs />
+        <Advantages />
     </section>
 </template>
 
@@ -47,6 +48,7 @@
     import 'vue3-carousel/dist/carousel.css';
     import { Carousel, Slide, Pagination } from 'vue3-carousel';
     import Packs from '../components/Packs.vue';
+    import Advantages from '../components/Advantages.vue';
 
     const slides = [
         {
@@ -99,6 +101,12 @@
         margin-top: 50px;
         grid-template-columns: 1fr 1fr;
         color: var(--color-white);
+    }
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .online-proxy {

@@ -1,5 +1,5 @@
 <template>
-    <div class="packs">
+    <div class="packs container">
         <h2>Наши тарифы</h2>
 
         <div class="packs-list">
