@@ -98,7 +98,7 @@
 <style lang="scss" scoped>
     .promotion {
         display: grid;
-        margin-top: 50px;
+        margin-top: 100px;
         grid-template-columns: 1fr 1fr;
         color: var(--color-white);
     }
