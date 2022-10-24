@@ -38,14 +38,15 @@
         </section>
     </section>
 
-    <section class="page-content">
-
+    <section class="page-content container">
+        <Packs />
     </section>
 </template>
 
 <script lang="ts" setup>
     import 'vue3-carousel/dist/carousel.css';
     import { Carousel, Slide, Pagination } from 'vue3-carousel';
+    import Packs from '../components/Packs.vue';
 
     const slides = [
         {
@@ -93,11 +94,6 @@
 </script>
 
 <style lang="scss" scoped>
-    .page-content {
-        // TODO удалить
-        min-height: 700px;
-    }
-
     .promotion {
         display: grid;
         margin-top: 50px;
