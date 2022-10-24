@@ -106,7 +106,7 @@
 
 <style lang="scss" scoped>
     .top-info > *:first-child {
-        margin-top: 100px;
+        margin-top: 120px;
     }
 
     .secondary {
