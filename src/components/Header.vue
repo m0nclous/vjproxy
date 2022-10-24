@@ -39,12 +39,13 @@
         $height: 60px;
         $padding-top: 10px;
 
-        position: sticky;
+        //position: sticky;
+        position: absolute;
         top: 0;
 
         width: 100%;
         height: $height;
-        margin-top: -$height - $padding-top - $padding-top;
+        //margin-top: -$height - $padding-top - $padding-top;
         padding-top: $padding-top;
         padding-bottom: $padding-top;
 
