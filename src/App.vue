@@ -1,5 +1,6 @@
 <template>
     <Header />
+    <TopInfo />
     <router-view />
     <Footer />
 
@@ -8,6 +9,7 @@
 
 <script lang="ts" setup>
     import Header from './components/Header.vue';
+    import TopInfo from './components/TopInfo.vue';
     import Footer from './components/Footer.vue';
 </script>
 

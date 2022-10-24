@@ -4,7 +4,10 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: () => import('./views/Home.vue')
+        component: () => import('./views/Home.vue'),
+        meta: {
+            title: 'Главная'
+        }
     },
     {
         path: '/price',
@@ -13,54 +16,84 @@ const routes = [
             {
                 name: 'PriceStandard',
                 path: '/price/standard',
-                component: () => import('./views/Price/Standard.vue')
+                component: () => import('./views/Price/Standard.vue'),
+                meta: {
+                    title: 'Стандартные прокси'
+                }
             },
             {
                 name: 'PriceProfessional',
                 path: '/price/professional',
-                component: () => import('./views/Price/Professional.vue')
+                component: () => import('./views/Price/Professional.vue'),
+                meta: {
+                    title: 'Профессиональные прокси'
+                }
             },
             {
                 name: 'PricePrivate',
                 path: '/price/private',
-                component: () => import('./views/Price/Private.vue')
+                component: () => import('./views/Price/Private.vue'),
+                meta: {
+                    title: 'Приватные прокси'
+                }
             },
             {
                 name: 'PriceMobile',
                 path: '/price/mobile',
-                component: () => import('./views/Price/Mobile.vue')
+                component: () => import('./views/Price/Mobile.vue'),
+                meta: {
+                    title: 'Мобильные прокси'
+                }
             },
             {
                 name: 'PriceVPN',
                 path: '/price/vpn',
-                component: () => import('./views/Price/VPN.vue')
+                component: () => import('./views/Price/VPN.vue'),
+                meta: {
+                    title: 'VPN'
+                }
             }
         ]
     },
     {
         path: '/about',
         name: 'About',
-        component: () => import('./views/About.vue')
+        component: () => import('./views/About.vue'),
+        meta: {
+            title: 'О нас'
+        }
     },
     {
         path: '/reviews',
         name: 'Reviews',
-        component: () => import('./views/Reviews.vue')
+        component: () => import('./views/Reviews.vue'),
+        meta: {
+            title: 'Отзывы'
+        }
     },
     {
         path: '/faq',
         name: 'FAQ',
-        component: () => import('./views/FAQ.vue')
+        component: () => import('./views/FAQ.vue'),
+        meta: {
+            title: 'FAQ'
+        }
     },
     {
         path: '/contacts',
         name: 'Contacts',
-        component: () => import('./views/Contacts.vue')
+        component: () => import('./views/Contacts.vue'),
+        meta: {
+            title: 'Контакты'
+        }
     },
     {
         path: '/rules',
         name: 'Rules',
-        component: () => import('./views/Contacts.vue')
+        component: () => import('./views/Contacts.vue'),
+        meta: {
+            title: 'Правила использования'
+        }
     }
 ];
 
