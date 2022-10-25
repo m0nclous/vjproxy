@@ -2,6 +2,7 @@
     <section class="page-content">
         <Packs />
         <Advantages />
+        <WhereUse />
         <ReviewsSlider />
         <Payments />
     </section>
@@ -12,6 +13,7 @@
     import Advantages from '../components/Advantages.vue';
     import Payments from '../components/Payments.vue';
     import ReviewsSlider from '../components/ReviewsSlider.vue';
+    import WhereUse from '../components/WhereUse.vue';
 </script>
 
 <style lang="scss" scoped>
