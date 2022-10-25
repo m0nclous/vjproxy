@@ -2,6 +2,7 @@
     <section class="page-content">
         <Packs />
         <Advantages />
+        <ReviewsSlider />
         <Payments />
     </section>
 </template>
@@ -10,6 +11,7 @@
     import Packs from '../components/Packs.vue';
     import Advantages from '../components/Advantages.vue';
     import Payments from '../components/Payments.vue';
+    import ReviewsSlider from '../components/ReviewsSlider.vue';
 </script>
 
 <style lang="scss" scoped>
