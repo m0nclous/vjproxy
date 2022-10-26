@@ -1,35 +1,39 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { createHtmlPlugin } from 'vite-plugin-html';
 
-export default defineConfig({
-    server: {
-        watch: {
-            usePolling: true
-        }
-    },
+export default ({ mode }) => {
+    process.env = {...process.env, ...loadEnv(mode, process.cwd())};
 
-    plugins: [
-        vue(),
-
-        createHtmlPlugin({
-            entry: 'src/main.ts',
-
-            inject: {
-                data: {
-                    title: 'VJProxy'
-                },
-
-                tags: [
-                    {
-                        injectTo: 'body-prepend',
-                        tag: 'div',
-                        attrs: {
-                            id: 'app'
-                        }
-                    }
-                ]
+    return defineConfig({
+        server: {
+            watch: {
+                usePolling: true
             }
-        })
-    ]
-});
+        },
+
+        plugins: [
+            vue(),
+
+            createHtmlPlugin({
+                entry: 'src/main.ts',
+
+                inject: {
+                    data: {
+                        title: process.env.VITE_APP_NAME
+                    },
+
+                    tags: [
+                        {
+                            injectTo: 'body-prepend',
+                            tag: 'div',
+                            attrs: {
+                                id: 'app'
+                            }
+                        }
+                    ]
+                }
+            })
+        ]
+    });
+};
