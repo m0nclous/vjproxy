@@ -1,9 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <router-link :to="{ name: 'Home'}" class="logo">
-                <img :src="logoUrl" alt="VJProxy">
-            </router-link>
+            <AppLogo />
 
             <nav>
 
@@ -31,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-    import logoUrl from '../assets/logo.png';
+    import AppLogo from './AppLogo.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -69,15 +67,6 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
-        }
-    }
-
-    .logo {
-        display: block;
-        height: 100%;
-
-        img {
-            height: 100%;
         }
     }
 
