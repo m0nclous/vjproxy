@@ -1,3 +1,5 @@
+@import 'normalize.scss';
+
 html {
   --color-white: #FFFFFF;
   --color-black: #2E2E2E;
@@ -14,8 +16,6 @@ html {
 }
 
 body {
-  margin: 0;
-
   font-family: 'Montserrat', sans-serif;
   color: var(--color-black);
 
