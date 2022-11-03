@@ -5,4 +5,4 @@ import router from './router';
 
 createApp(App).use(router).mount('#app');
 
-console.log('Test 2');
+console.log('Test 3');
