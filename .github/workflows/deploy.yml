@@ -19,7 +19,7 @@ jobs:
       # Setup key
       - run: set -eu
       - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.BEGET_KEY }}" < "$HOME/.ssh/BEGET_KEY"
+      - run: echo "${{ secrets.BEGET_KEY }}" > "$HOME/.ssh/BEGET_KEY"
       - run: chmod 600 "$HOME/.ssh/BEGET_KEY"
       # Build
       - run: npm ci
