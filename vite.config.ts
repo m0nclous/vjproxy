@@ -6,12 +6,6 @@ export default ({ mode }) => {
     process.env = {...process.env, ...loadEnv(mode, process.cwd())};
 
     return defineConfig({
-        server: {
-            watch: {
-                usePolling: true
-            }
-        },
-
         plugins: [
             vue(),
 
